@@ -27,7 +27,8 @@ nightly_artifact_zip() {
 manager_artifact_name() {
   case "$REPO" in
     Baka-SU/BakaSU) printf '%s\n' "Manager-release" ;;
-    *) printf '%s\n' "Manager" ;;
+    SukiSU-Ultra/SukiSU-Ultra) printf '%s\n' "Manager" ;;   # <-- 单独给 SukiSU 大写
+    *) printf '%s\n' "manager" ;;                           # <-- 官方原版 KernelSU 用的还是小写
   esac
 }
 
