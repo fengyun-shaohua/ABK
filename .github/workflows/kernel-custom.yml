@@ -185,8 +185,9 @@ on:
           CONFIG_NET_NS=y
           CONFIG_IPC_NS=y
           CONFIG_UTS_NS=y
-          CONFIG_CGROUPS=y
-          CONFIG_MEMCG=y
+          CONFIG_MACVLAN=y
+          CONFIG_CFS_BANDWIDTH=y
+          CONFIG_CGROUP_PIDS=y
 
 jobs:
   build-custom-kernel:
