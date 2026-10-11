@@ -15,7 +15,8 @@ source "${SCRIPT_DIR}/resolve-ksu-ref.sh"
 nightly_artifact_zip() {
   case "$REPO" in
     Baka-SU/BakaSU) printf '%s\n' "Manager-release.zip" ;;
-    tiann/KernelSU | SukiSU-Ultra/SukiSU-Ultra) printf '%s\n' "manager.zip" ;;
+    SukiSU-Ultra/SukiSU-Ultra) printf '%s\n' "Manager.zip" ;;   # <-- 把这个也加上！
+    tiann/KernelSU) printf '%s\n' "manager.zip" ;;
     *)
       echo "::error::Unknown repo for nightly.link manager download: ${REPO}" >&2
       exit 1
