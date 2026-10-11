@@ -168,11 +168,20 @@ on:
         required: false
         type: string
         default: ""
+
       custom_kernel_options:
         description: "自定义内核选项（每行一条 Kconfig/defconfig 片段）"
         required: false
         type: string
-        default: ""
+        default: |
+          CONFIG_NAMESPACES=y
+          CONFIG_USER_NS=y
+          CONFIG_PID_NS=y
+          CONFIG_NET_NS=y
+          CONFIG_IPC_NS=y
+          CONFIG_UTS_NS=y
+          CONFIG_CGROUPS=y
+          CONFIG_MEMCG=y
 
 jobs:
   build-custom-kernel:
