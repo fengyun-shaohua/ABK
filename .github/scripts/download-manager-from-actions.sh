@@ -26,7 +26,7 @@ nightly_artifact_zip() {
 manager_artifact_name() {
   case "$REPO" in
     Baka-SU/BakaSU) printf '%s\n' "Manager-release" ;;
-    *) printf '%s\n' "manager" ;;
+    *) printf '%s\n' "Manager" ;;
   esac
 }
 
